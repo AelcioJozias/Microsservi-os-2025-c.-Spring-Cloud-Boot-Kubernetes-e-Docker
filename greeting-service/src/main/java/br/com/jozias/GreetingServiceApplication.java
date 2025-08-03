@@ -6,10 +6,10 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @ConfigurationPropertiesScan
 @SpringBootApplication
-public class ApplicationStart {
+public class GreetingServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationStart.class, args);
+        SpringApplication.run(GreetingServiceApplication.class, args);
     }
 
 }
