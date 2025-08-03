@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-config-server
+  # tem uma opcao que da pra pegar nativo também (- native). Nesse exemplo está referenciando um diretorio git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AelcioJozias/jozias-config-server
+          search-paths:
+            - greeting-service
+#          username: username
+#          password: password
+server:
+  port: 8888
