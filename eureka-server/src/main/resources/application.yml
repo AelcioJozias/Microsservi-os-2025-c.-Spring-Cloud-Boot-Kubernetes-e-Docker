@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: naming-service
+server:
+  port: 8761
+
+## essa config ai, é pro eureka nao tentar se registrar em si mesmo
+# em producao poderiamos ter mais de uma instancia do eureka
+# pra caso caisse uma, os serviços utilizariam outra
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+##
