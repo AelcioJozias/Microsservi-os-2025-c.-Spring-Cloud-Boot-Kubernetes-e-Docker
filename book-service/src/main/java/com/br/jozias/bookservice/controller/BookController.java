@@ -7,6 +7,7 @@ import com.br.jozias.bookservice.model.Book;
 import com.br.jozias.bookservice.proxy.ExchangeFeignClient;
 import com.br.jozias.bookservice.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,7 @@ public class BookController {
     private ExchangeFeignClient exchangeFeignClient;
 
 
+    @Transactional
     @GetMapping(value = "/{id}/{currency}" )
     public Book findBook(@PathVariable Long id, @PathVariable String currency) {
         final String porta = instanceInformationService.retrieveServerPort();
