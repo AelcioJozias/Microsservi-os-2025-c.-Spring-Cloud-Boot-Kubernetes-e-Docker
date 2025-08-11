@@ -4,9 +4,9 @@ spring:
 server:
   port: 8761
 
-## essa config ai, é pro eureka nao tentar se registrar em si mesmo
+## essa config ai, ï¿½ pro eureka nao tentar se registrar em si mesmo
 # em producao poderiamos ter mais de uma instancia do eureka
-# pra caso caisse uma, os serviços utilizariam outra
+# pra caso caisse uma, os serviï¿½os utilizariam outra
 eureka:
   client:
     register-with-eureka: false
